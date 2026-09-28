@@ -45,9 +45,9 @@ learned in it.
    delivery is a new single point of failure.
 4. **Calibrate on real traffic, not vibes.** Thresholds here come from a
    sweep grid over 400 real agent replies (see below). A first config
-   derived from the "10th grade" rule of thumb flagged 68% of genuine
-   output — it was measuring style, not readability. A gate that cries
-   wolf is a dead gate.
+   derived from the "10th grade" rule of thumb made 270 of those 400
+   replies (68%) FAIL — it was measuring style, not readability. A gate
+   that cries wolf is a dead gate.
 
 ## Thresholds
 

@@ -67,8 +67,9 @@ def lint(text: str, surface: str = "user") -> dict:
     else:
         grade_cap, sent_cap, len_cap = 10.0, 45, 350
     # caps calibrated 2026-09-28 on 400 real assistant replies (sweep grid):
-    # 45w/semi-split => ~14% user / 8% tech fail on the densest corpus.
-    # 28w flagged 68% (style, not pathology) — a gate that cries wolf is a dead gate.
+    # 45-word cap + ';' split -> 13% of replies fail (user surface), 7% (tech).
+    # The earlier 28-word cap made 68% of replies FAIL (270/400) — it was
+    # measuring style, not readability. A gate that cries wolf is a dead gate.
 
     t, kept = _strip_nonprose(text)
     words = re.findall(r"[A-Za-z']+", t)
